@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Reflect Growth!!</title> 
+{% endblock %}
+
+{% block body %}
+<h1><center>💯 Days Challenge of Commitment ✔</center></h1>
+
+    <hr>
+    <div class="jumbotron" style = "background-color: #035aa6;">
+        <h2>Create New Task Post: </h2>
+        <form action='/posts' method='POST'>
+        <!--table>
+            <tr>
+                <td>
+                    Title:
+                </td>
+                <td> 
+                    
+                    <input class="form-control" type="text" name='title' id='title' placeholder="Enter Title" aria-label="Enter Title">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Estimated Time: 
+                </td>
+                <td>
+                    <input class="form-control" type='text' name='author' id='author' placeholder="Enter Time" aria-label="Enter Time">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Post: 
+                </td>
+                <td>
+                    <input class="form-control" type='textarea' name='content' id='content' placeholder="Enter Desrription" aria-label="Enter Description">
+                </td>
+            </tr>
+                <input type='submit' value='Post'>
+        </table-->
+       
+            <label for="title">Title:</label>
+            <input class="form-control" type="text" name='title' id='title' placeholder="Enter Title" aria-label="Enter Title">
+            <br>
+            <label for="author">Estimated Time:</label>
+            <input class="form-control" type='text' name='author' id='author' placeholder="Enter Time" aria-label="Enter Time">
+            <br>
+            <label for="content">Post:</label>
+            <textarea class="form-control" id="content" name='content' placeholder="Enter Description" aria-label="Enter Description" rows="3"></textarea>
+            <br>
+            <input type='submit' value='Post'>
+        </form>
+    </div>
+    
+    <hr>
+
+    {% for post in posts %}
+        <div class="jumbotron" style = "background-color: #40bad5;">
+        <h2>{{ post.title }}</h2>
+
+        {% if post.author %}
+            <small>By: {{ post.author }} on {{post.date_posted}}</small>
+            <br>
+        {% else %}
+            <h3>By: N/A</h3>
+        {% endif %}
+        
+        <p style = "white-space: pre-wrap;">{{ post.content }}</p>
+        <a class="btn btn-danger" href='/posts/delete/{{post.id}}'>Delete</a>
+        <a class="btn btn-info" href='/posts/edit/{{post.id}}'>Edit</a>
+        </div>
+        <hr>
+    {% endfor%}
+
+{% endblock %}

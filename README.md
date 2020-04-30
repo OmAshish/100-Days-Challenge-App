@@ -1,2 +1,3 @@
-# Flask-Posting-App
-This is made to give you an easy understanding how the deployment of python web page works.
+# 100_Days_Challege_App
+THis is made to boost your productivity in order to be more ready and analysis the upcoming competitions.
+

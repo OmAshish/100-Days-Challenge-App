@@ -12,4 +12,5 @@ NOTE: This is made as Flask basic learning and be good at basics. This is a very
 
 PS: I just you to use a 3.5 python environmerment to ran this code!
 
-Happy Learning!😊🎇
+Happy Learning!😊🎇 !!
+If you liked this repo, please do give a star!!

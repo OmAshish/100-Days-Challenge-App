@@ -10,7 +10,7 @@ The project also helps to even edit your posts like DELETE if done and EDIT if n
 
 NOTE: This is made as Flask basic learning and be good at basics. This is a very basic code but this is an immense about of things to learn so never give up be proactive be going. 
 
-PS: I just you to use a 3.5 python environmerment to ran this code!
+PS: I suggest you to use a 3.5 python environmerment to ran this code!
 
 Happy Learning!😊🎇 !!
 If you liked this repo, please do give a star!!
